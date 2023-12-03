@@ -16,13 +16,21 @@
     ],
     "ios": {
       "supportsTablet": true,
-      "bundleIdentifier": "com.anonymous.app-synchrone"
+      "bundleIdentifier": "com.anonymous.app-synchrone",
+      "infoPlist": {
+        "NSCameraUsageDescription": "Allow $(PRODUCT_NAME) to access camera.",
+        "NSMicrophoneUsageDescription": "Allow $(PRODUCT_NAME) to access your microphone"
+      }
     },
     "android": {
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#ffffff"
-      }
+      },
+      "permissions": [
+        "android.permission.CAMERA"
+      ],
+      "package": "com.anonymous.appsynchrone"
     },
     "web": {
       "favicon": "./assets/favicon.png"
@@ -32,8 +40,11 @@
     },
     "plugins": [
       "expo-router",
-      [ "expo-barcode-scanner",
-        { "cameraPermission": "Allow $(PRODUCT_NAME) to access camera." }
+      [
+        "expo-barcode-scanner",
+        {
+          "cameraPermission": "Allow $(PRODUCT_NAME) to access camera."
+        }
       ]
     ]
   }
