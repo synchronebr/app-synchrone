@@ -20,6 +20,13 @@ export default function Home() {
           <Text className='text-zinc-50'>Ler QR Code</Text>
         </TouchableOpacity>
       </Link>
+      <Link href="/Ble" asChild>
+        <TouchableOpacity
+            className='border rounded-sm border-zinc-50 p-2 overflow-hidden top-6'
+          >
+          <Text className='text-zinc-50'>Bluetooth</Text>
+        </TouchableOpacity>
+      </Link>
     </View>
   );
 }
